@@ -1,0 +1,16 @@
+solution 1:
+#using nested queries and NOT IN clause approach
+
+SELECT Name AS "Customers" FROM Customers
+WHERE Id NOT IN ( SELECT CustomerID FROM Orders);
+
+
+
+
+
+Solution 2:
+#using the concept of left outer join, I have also attached a video material to understand about it
+SELECT C.Name as "Customers" FROM Customers as C
+LEFT JOIN Orders as O
+ON C.ID = O.CustomerId
+WHERE O.CustomerId is NULL;
