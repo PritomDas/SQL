@@ -1,0 +1,13 @@
+Reference:
+https://www.w3schools.com/sql/func_mysql_right.asp
+
+Live working help:
+http://www.sqlfiddle.com/#!9/cb8dc/1
+
+Stackoverflow help:
+https://stackoverflow.com/questions/34832734/query-to-order-by-the-last-three-characters-of-a-column
+
+Solution:
+SELECT Name FROM STUDENTS
+WHERE Marks>75 
+ORDER BY RIGHT(Name,3), ID ASC;
