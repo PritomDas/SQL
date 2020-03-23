@@ -1,1 +1,7 @@
-a
+I have implmented the solution using regex. I also found a very good tutorial on this link "https://study.com/academy/lesson/regular-
+expressions-in-sql-server-databases-implementation-use.html"
+
+My solution:
+SELECT DISTINCT(CITY)
+FROM STATION
+WHERE CITY REGEXP '[aeiou]$';
