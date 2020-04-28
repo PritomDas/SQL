@@ -1,0 +1,5 @@
+SELECT months * salary as income, COUNT(*)
+FROM Employee
+GROUP By income
+ORDER BY income 
+DESC LIMIT 1;
