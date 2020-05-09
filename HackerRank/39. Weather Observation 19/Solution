@@ -1,0 +1,16 @@
+/* My observations
+Same approach as my previous solution
+The last problem used Manhattan Distance Metric but for this we are going to use Euclidean Distance Metric
+*/
+
+/*
+#use SQRT to find square root
+#use MIN and MAX to find smallest and largest values
+#use POW to square of the number by passing 2nd prameter as 2
+#use the ROUND to round of decimal numbers
+#Euclidean Distance formula looks like: 
+If the points (x1,y1) and (x2,y2) are in 2-dimensional space, then the Euclidean distance between them is √(x2−x1)^2+(y2−y1)^2
+*/
+
+SELECT ROUND(SQRT(POW(MIN(LAT_N)-MAX(LAT_N), 2) + POW(MIN(LONG_W)-MAX(LONG_W), 2)), 4) 
+FROM STATION;
