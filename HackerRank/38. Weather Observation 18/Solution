@@ -1,0 +1,17 @@
+/* My analysis for this problem
+The manhattan distance formula is |x1 - x2| + |y1 - y2|
+use the "MIN" and "MAX" to get the proper values
+use the "ABS" to get the absolute values
+use the "ROUND" to get rounded value of answer
+
+1) [ MIN(LAT_N)-MAX(LAT_N) + MIN(LONG_N)-MAX(LONG_W) ]
+2) ABS[ part1 ] + ABS [ part2 ]
+3) ROUND[ whole part, number of places to round of to ]
+*/
+
+
+
+
+Solution:-
+SELECT ROUND(ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W)-MAX(LONG_W)),4)
+FROM STATION;
