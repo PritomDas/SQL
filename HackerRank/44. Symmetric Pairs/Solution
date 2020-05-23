@@ -1,0 +1,13 @@
+Helpful link that was super helpful: https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Symmetric-Pairs/
+This was a very good problem. I even setup tables with the given data and tried out querying step by step.
+
+My solution:
+SELECT f1.X,f1.Y FROM Functions as f1
+WHERE f1.X = f1.Y
+GROUP BY f1.X, f1.Y HAVING COUNT(*)>1
+
+UNION
+
+SELECT f1.X,f1.Y FROM Functions as f1, Functions as f2
+WHERE f1.X <> f1.Y AND f1.X = f2.y AND f1.Y = f2.X AND f1.X < f2.X
+ORDER BY X;
