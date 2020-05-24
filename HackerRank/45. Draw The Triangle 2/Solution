@@ -1,0 +1,9 @@
+/*
+1. Set a temporary variable
+2. Set its value to 0 initially
+3. Add 1 to that value for a 20 round trip
+4. Use information_schema.tables which provides access to database metadata
+5. Use REPEAT function to generate texts of each line. Also, use a variable to decide the length of each line and apply REPEAT functon for each row of a table with at least 20 rows. Finally, control the number of lines to output.
+*/
+SET @number = 0;
+SELECT REPEAT('* ', @number := @number+1) FROM information_schema.tables LIMIT 20;
