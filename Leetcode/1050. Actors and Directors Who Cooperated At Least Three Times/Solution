@@ -1,0 +1,6 @@
+# Observe carefull the rows "actor_id" and "director_id"
+# if you find any three rows where "actor_id" == "director_id" then print only that unique pair
+
+select actor_id, director_id from ActorDirector
+group by actor_id, director_id
+having count(*)>=3
