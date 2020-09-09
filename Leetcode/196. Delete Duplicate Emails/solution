@@ -1,0 +1,7 @@
+# I just need to delete duplicate records which have the higher id number
+# from the given database, I will delete the records that have duplicate records and higher id number
+#i will use the alias concept of the table to help me with that
+
+delete p1
+from Person p1, Person p2
+where p1.Email = p2.Email and p1.Id>p2.ID;
